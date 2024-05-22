@@ -39,7 +39,6 @@ class BooksController {
       } else if (req.file === undefined) {
         res.status(400).json({ message: "No file selected!" });
       } else {
-        console.log("masuk");
         const { title, description, pages, categoryId } = req.body;
         const coverPath = `${req.protocol}://${req.get("host")}/uploads/${
           req.file.filename
@@ -53,7 +52,6 @@ class BooksController {
             coverPath: coverPath,
           });
 
-          console.log(`File accessible at ${coverPath}`);
           res.status(201).json({ message: "Book created successfully", book });
         } catch (error) {
           console.log(`Failed to create book with coverPath: ${coverPath}`);
