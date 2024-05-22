@@ -35,10 +35,14 @@ This project serves as the backend for a Library Management System, designed to 
 - Ensure PostgreSQL is installed and running on your machine.
 - Create a database for the project.
 - Configure the database settings in config/config.json.
+- Create a database for the project
+  ```bash
+   npx sequelize db:create
+  ```
 
 4. **Run database migrations::**
    ```bash
-   npx sequelize-cli db:migrate
+   npx sequelize db:migrate
    ```
 5. **Start the server:**
    ```bash
